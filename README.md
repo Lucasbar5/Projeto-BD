@@ -1,6 +1,11 @@
 # Projeto-BD
 Projeto desenvolvido para a disciplina de Banco de Dados, utilizando **Spring Boot**, **Docker**, e banco de dados **PostgreSQL**.
-
+## Equipe
+```bash
+Antonio Lucas Barbosa Salvador
+Lucas Delacroix Alves Do Rêgo
+Guilherme Pereira
+```
 ## Eventos academicos
 
 Foi escolhido o tema de eventos academicos devido a maior familiaridade na area.
