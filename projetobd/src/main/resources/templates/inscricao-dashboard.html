@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR" th:fragment="conteudo">
+<body>
+<h1>Dashboard de Inscrições</h1>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+    <tr><th>ID</th><th>Usuário</th><th>Evento</th><th>Data</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="inscricao : ${inscricoes}">
+        <td th:text="${inscricao.id}">1</td>
+        <td th:text="${inscricao.usuario.nome}">Nome Usuário</td>
+        <td th:text="${inscricao.evento.nome}">Nome Evento</td>
+        <td th:text="${#dates.format(inscricao.dataInscricao, 'dd/MM/yyyy')}">01/01/2025</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
