@@ -40,7 +40,11 @@ O projeto utiliza PostgreSQL, e o PGAdmin está disponível para gerenciar o ban
 
 <img width="1145" height="784" alt="image" src="https://github.com/user-attachments/assets/50c7fbc5-3e68-4d0e-bde0-fc97a93a0aff" />
 
+### Protótipo de Telas
 
+![alt text](docs/image.png)
+
+![alt text](docs/image2.png)
 ### PGAdmin acessível em:
 ```bash
 http://localhost:8084
