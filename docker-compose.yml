@@ -1,0 +1,49 @@
+name: projetobd
+services:
+  projetobd:
+    container_name: projetobd
+    build:
+      context: ./projetobd
+    ports:
+      - 8080:8080
+    volumes:
+      - ./projetobd/src:/projetobd/src
+    logging:
+      options:
+        max-size: 10m
+    networks:
+      - projeto-network
+
+
+  psql:
+    container_name: psql
+    image: postgres:alpine3.19
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: db
+      POSTGRES_PASSWORD: 123456
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 10m
+    networks:
+      - projeto-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8084:80"
+    networks:
+      - projeto-network
+
+networks:
+  projeto-network:
+    name: projeto-network
+    driver: bridge

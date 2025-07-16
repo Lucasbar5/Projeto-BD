@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <style>
+        /* Estilos simples para layout admin */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background: #f4f6f8;
+        }
+        nav.sidebar {
+            width: 220px;
+            background-color: #2f4050;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        nav.sidebar a {
+            color: #b8c7ce;
+            text-decoration: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #3c4b61;
+        }
+        nav.sidebar a:hover {
+            background-color: #1ab394;
+            color: white;
+        }
+        main.content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        header.navbar {
+            height: 60px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #2f4050;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="sidebar">
+    <h2>Admin Panel</h2>
+    <a th:href="@{/admin/dashboard}">Dashboard</a>
+    <a th:href="@{/admin/usuarios}">Usuários</a>
+    <a th:href="@{/admin/eventos}">Eventos</a>
+    <a th:href="@{/admin/palestras}">Palestras</a>
+    <a th:href="@{/admin/inscricoes}">Inscrições</a>
+    <a th:href="@{/admin/certificados}">Certificados</a>
+    <a th:href="@{/admin/pagamentos}">Pagamentos</a>
+</nav>
+
+<main class="content">
+    <header class="navbar">
+        Painel Administrativo
+    </header>
+
+    <section th:replace="${conteudo} :: conteudo"></section>
+    <!-- Essa seção é um placeholder para injetar conteúdo das páginas filhas -->
+</main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR" th:fragment="conteudo">
+<body>
+<h1>Dashboard de Eventos</h1>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+    <tr><th>ID</th><th>Nome</th><th>Data</th><th>Local</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="evento : ${eventos}">
+        <td th:text="${evento.id}">1</td>
+        <td th:text="${evento.nome}">Nome do Evento</td>
+        <td th:text="${#dates.format(evento.data, 'dd/MM/yyyy')}">01/01/2025</td>
+        <td th:text="${evento.local}">Local</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

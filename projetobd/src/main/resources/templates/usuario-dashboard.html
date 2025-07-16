@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR" th:fragment="conteudo">
+<body>
+<h1>Dashboard de Usuários</h1>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+    <tr><th>ID</th><th>Nome</th><th>Email</th><th>Perfil</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="usuario : ${usuarios}">
+        <td th:text="${usuario.id}">1</td>
+        <td th:text="${usuario.nome}">Nome</td>
+        <td th:text="${usuario.email}">email@exemplo.com</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

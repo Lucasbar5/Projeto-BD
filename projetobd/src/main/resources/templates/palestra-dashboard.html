@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR" th:fragment="conteudo">
+<body>
+<h1>Dashboard de Palestras</h1>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+    <tr><th>ID</th><th>Título</th><th>Palestrante</th><th>Evento</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="palestra : ${palestras}">
+        <td th:text="${palestra.id}">1</td>
+        <td th:text="${palestra.titulo}">Título</td>
+        <td th:text="${palestra.palestrante}">Palestrante</td>
+        <td th:text="${palestra.evento.nome}">Evento</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
