@@ -26,7 +26,12 @@ http://localhost:8080/admin/dashboard
 ## 🗃️ Banco de Dados
 O projeto utiliza PostgreSQL, e o PGAdmin está disponível para gerenciar o banco.
 
+<img width="1145" height="784" alt="image" src="https://github.com/user-attachments/assets/50c7fbc5-3e68-4d0e-bde0-fc97a93a0aff" />
+
+
 ### PGAdmin acessível em:
 ```bash
 http://localhost:8084
 ```
+
+
